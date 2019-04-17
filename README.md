@@ -39,6 +39,8 @@ The column strategy alters the database schema by creating a new column in the p
 
 # Results
 
+Average running time per select * from page_photo query after 1000 queries.
+
 | Strategy  | PG 9.6      | PG 11        |
 | ----------|:-----------:| ------------:|
 | baseline  | 5.81087ms   |  9.41187ms   |
