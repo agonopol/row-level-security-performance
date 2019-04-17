@@ -8,6 +8,8 @@ To create the two postgres instances:
 make up
 ```
 
+This sets up two dockers, one running postgres 9.6 on port 5496 and one running postgres 11 on port 5411
+
 To generate the schemas and seed the instances with toy data:
 ```bash
 make seed-db
@@ -20,6 +22,7 @@ make down
 
 # Experiments
 
+To run the experiments execute the python code, be sure to tear the databases up and down between various experiments, as the policies can conflict
 The strategies being compared are join:
 ```bash
 join.py --port 54<96|11> 
