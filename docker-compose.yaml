@@ -1,0 +1,27 @@
+version: "3"
+services:
+  pg9:
+    image: postgres:9.6.0
+    container_name: 'pg-9.6'
+    command: postgres -p 5496
+    ports:
+      - 5496:5496
+    environment:
+      POSTGRES_DB: 'postgres'
+    networks:
+      - database
+  pg11:
+    image: postgres:11
+    container_name: 'pg-11'
+    command: postgres -p 5411
+    ports:
+      - 5411:5411
+    environment:
+      POSTGRES_DB: 'postgres'
+    networks:
+      - database
+volumes:
+  pgdata:
+networks:
+  database:
+    driver: bridge
